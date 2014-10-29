@@ -1,0 +1,21 @@
+#
+# Copyright (C) 2014 Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
+#
+# msplash is free software; you can redistribute it and/or modify it
+# under the terms of the GNU Lesser General Public License as published by
+# the Free Software Foundation; either version 2.1 of the License, or
+# (at your option) any later version.
+#
+
+[Unit]
+Description=Maui Splash
+Wants=droid-hal-init.service
+After=droid-hal-init.service
+
+[Service]
+EnvironmentFile=-/var/lib/environment/compositor/*.conf
+ExecStart=/usr/bin/qmlscene /usr/share/msplash/main.qml
+RemainAfterExit=yes
+
+[Install]
+WantedBy=basic.target
