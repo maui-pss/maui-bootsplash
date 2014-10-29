@@ -22,7 +22,7 @@ Boot splash.
 %install
 # Prepare directories
 mkdir -p %{buildroot}/lib/systemd/system/basic.target.wants/
-mkdir -p %{buildroot}%{_sysconfdir}/systemd/system/
+mkdir -p %{buildroot}/lib/systemd/system/
 
 # Services
 install -m 0644 services/msplash.service %{buildroot}/lib/systemd/system/
