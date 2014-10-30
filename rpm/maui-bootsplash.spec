@@ -1,4 +1,4 @@
-Name:       msplash
+Name:       maui-bootsplash
 Summary:    Maui Boot Splash
 Version:    1
 Release:    1
@@ -9,7 +9,7 @@ Source0:    %{name}-%{version}.tar.xz
 
 Requires:   systemd >= 187
 Requires:   qt5-qtdeclarative-qmlscene
-Requires:   msplash-theme
+Requires:   maui-bootsplash-theme
 
 %description
 Boot splash.
@@ -25,13 +25,13 @@ mkdir -p %{buildroot}/lib/systemd/system/basic.target.wants/
 mkdir -p %{buildroot}/lib/systemd/system/
 
 # Services
-install -m 0644 services/msplash.service %{buildroot}/lib/systemd/system/
+install -m 0644 services/maui-bootsplash.service %{buildroot}/lib/systemd/system/
 
 # Link services
-ln -sf ../msplash.service %{buildroot}/lib/systemd/system/basic.target.wants/
+ln -sf ../maui-bootsplash.service %{buildroot}/lib/systemd/system/basic.target.wants/
 
 
 %files
 %defattr(-,root,root,-)
-/lib/systemd/system/msplash.service
-/lib/systemd/system/basic.target.wants/msplash.service
+/lib/systemd/system/*
+/lib/systemd/system/basic.target.wants/*
