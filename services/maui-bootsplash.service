@@ -15,7 +15,6 @@ After=droid-hal-init.service
 [Service]
 EnvironmentFile=-/var/lib/environment/compositor/*.conf
 ExecStart=/usr/bin/qmlscene /usr/share/maui-bootsplash/main.qml
-RemainAfterExit=yes
 
 [Install]
 WantedBy=basic.target
