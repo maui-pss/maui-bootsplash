@@ -1,6 +1,6 @@
 Name:       maui-bootsplash
 Summary:    Maui Boot Splash
-Version:    2
+Version:    3
 Release:    1
 Group:      System/Base
 License:    LGPLv2.1+
