@@ -11,6 +11,7 @@
 Description=Maui Splash
 Wants=droid-hal-init.service
 After=droid-hal-init.service
+Conflicts=systemd-user-sessions.service
 
 [Service]
 EnvironmentFile=-/var/lib/environment/compositor/*.conf
