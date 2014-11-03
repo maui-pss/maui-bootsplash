@@ -9,13 +9,14 @@
 
 [Unit]
 Description=Maui Splash
-Wants=droid-hal-init.service
+Before=systemd-user-sessions.service
 After=droid-hal-init.service
-Conflicts=systemd-user-sessions.service
 
 [Service]
+Type=oneshot
 EnvironmentFile=-/var/lib/environment/compositor/*.conf
 ExecStart=/usr/bin/qmlscene /usr/share/maui-bootsplash/main.qml
+RemainAfterExit=no
 
 [Install]
 WantedBy=basic.target
