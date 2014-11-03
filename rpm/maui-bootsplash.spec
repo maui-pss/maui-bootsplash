@@ -22,6 +22,7 @@ Boot splash.
 %install
 # Prepare directories
 mkdir -p %{buildroot}/lib/systemd/system/basic.target.wants/
+mkdir -p %{buildroot}/lib/systemd/system/multi-user.target.wants/
 mkdir -p %{buildroot}/lib/systemd/system/
 
 # Services
