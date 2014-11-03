@@ -29,9 +29,11 @@ install -m 0644 services/maui-bootsplash.service %{buildroot}/lib/systemd/system
 
 # Link services
 ln -sf ../maui-bootsplash.service %{buildroot}/lib/systemd/system/basic.target.wants/
+ln -sf ../maui-bootsplash.service %{buildroot}/lib/systemd/system/multi-user.target.wants/
 
 
 %files
 %defattr(-,root,root,-)
 /lib/systemd/system/*
 /lib/systemd/system/basic.target.wants/*
+/lib/systemd/system/multi-user.target.wants/*
